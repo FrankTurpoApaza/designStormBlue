@@ -1,0 +1,29 @@
+@media (max-width: 800px) {
+    
+    .txt_img__led{
+        font-size: 3rem;
+    }
+    .txt_img__des{
+        font-size: 1.5rem;
+    }
+    .btnStart{
+        font-size: 1rem;
+        padding: 5px 20px;
+    }
+
+    .tarjeta{
+        flex-direction: column;
+    }
+    .tarjeta-txt{
+        width: 65%;
+    }
+
+}
+
+@media (max-width: 490px) {
+    
+    .txt_img__des{
+        display: none;
+    }
+
+}

@@ -1,0 +1,423 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --cd: #3295f2;
+}
+
+body
+{
+    position: relative;
+    background: rgb(0, 2, 20);
+}
+
+.sup
+{
+    background: rgb(0,2,20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    
+}
+
+.titulo
+{
+    display: flex;
+}
+.titulo1
+{
+    font-size: 2em;
+    color: white;
+}
+.titulo2
+{
+    font-size: 2em;
+    color: #3295f2;
+    margin-left: 10px;
+}
+
+.cuadro
+{
+    list-style: none;
+    display: flex;
+}
+.item a
+{
+    text-decoration: none;
+    font-size: 1.1em;
+    color: white;
+    display: block;
+    padding: 2px 12px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.item a:hover
+{
+    color: #3295f2;
+    box-shadow: 1px 1px 1px white;
+/*    background: white;*/
+}
+
+.item_wtsp
+{
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+    overflow: visible;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+.item_wtsp__img
+{
+    width: 100%;
+}
+.item_wtsp__txt
+{
+    position: relative;
+    bottom: 40px;
+    left: -7px;
+    color: #fff;
+    opacity: 0;
+
+    transition: .5s;
+}
+
+.item_wtsp:hover .item_wtsp__txt
+{
+    opacity: 1;
+    bottom: 5px;    
+}
+
+/*----------Conf de la presentacion----------*/
+
+.caja-img
+{
+    position: relative;
+    background: rgb(0,2,20);
+    width: 100%;
+    margin-top: 60px;
+    color: white;
+
+    max-height: 650px;
+    overflow: hidden;
+}
+.caja-img__img
+{
+    display: flex;
+}
+.imgPl
+{
+    width: 100%;
+    max-height: 950px;
+}
+.imgPl-relleno
+{
+    line-height: 100%;
+    width: 30%;
+    background: linear-gradient(#1D236C,#181D5F, #051242);
+}
+.txt_img
+{
+    position: absolute;
+    top: 1.5em;
+    width: 90%;
+    margin-left: 5%;
+    font-family: sans-serif;
+    font-size: 3em;
+    color: white;
+    text-align:left;
+}
+.txt_img__led
+{
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5em;
+
+    text-shadow: 0 0 5px var(--cd);
+}
+.txt_img__des
+{
+    margin-top: 100px;
+    width: 70%;
+    font-size: .7em;
+    line-height: 1.2em;
+    color: #ffffff;
+    
+}
+.btnStart
+{
+    margin-top: 30px;
+
+    background: 0;
+    text-transform: uppercase;
+    font-size: .4em;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    color: #fff;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.txt_img:hover .txt_img__led
+{
+    text-shadow: 0 0 5px #3295f2,
+    0 0 20px #3295f2,
+    0 0 30px #3295f2;
+}
+.txt_img:hover .btnStart
+{
+    border: 1px solid #3295f2;
+
+    text-shadow: 0 0 5px #3295f2,
+    0 0 20px #3295f2,
+    0 0 30px #3295f2;
+
+    box-shadow: 0 0 5px #3295f2,
+    0 0 20px #3295f2,
+    0 0 30px #3295f2;
+}
+/*---------Contenido total de la pagina---------*/
+
+.principal
+{
+    width: 90%;
+    padding: 0 18px;
+    margin: auto;
+    color: white;
+}
+
+.pri-title
+{
+    margin: 70px 0 50px 0;
+    color: var(--cd);
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+}
+.pri-title::before
+{
+    content: '';
+    position: absolute;
+    width: 55px;
+    height: 3px;
+    top: 40px;
+    background: var(--cd);
+}
+
+/*------Contenido de la descripcion------*/
+
+
+/*------Contenido de servicios------*/
+
+.PServicios__box
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 10px;
+    row-gap: 35px;
+}
+.PServicios__trj
+{
+    width: 370px;
+    border-radius: 8px;
+    border: 2px solid var(--cd);
+}
+.PServicios__trj .reimg
+{
+    overflow: hidden;
+}
+.PServicios__trj img
+{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+    transition: .5s;
+}
+.PServicios__trj:hover img
+{
+    transform: scale(1.1)
+}
+
+.PServicios__trj p
+{
+    text-align: center;
+    font-size: 1.2em;
+    padding: 10px 0;
+}
+
+/*--------Contenido de la tarjeta--------*/
+
+.tarjeta
+{
+    display: flex;
+    
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.tarjeta-img
+{
+    height: 100%;
+    width: 65%;
+    border: 2px solid var(--cd);
+}
+.tarjeta-txt
+{
+    color: rgb(0,2,20);
+    height: 75%;
+    width: 300px;
+    background: white;
+    font-size: 1.5em;
+    padding: 32px 50px;
+   
+}
+.botonT
+{
+    display: inline-block;
+    background: blue;
+    line-height: 3em;
+    padding: 0 1.7em;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: .5em;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/*Contenido lateral-final*/
+
+.lateral
+{
+    width: 90%;
+    padding: 8px 15px;
+    margin: 40px auto;
+    text-align: center;
+    /*background: linear-gradient(135deg,transparent,green );*/
+    border: 2px solid green;
+    border-radius: 8px;
+}
+
+.mc
+{
+    margin: 0;
+    background-color: rgb(250,250,255,);
+    color: var(--cd);
+    
+}
+
+.pl
+{
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.boton
+{
+    display: inline-block;
+    background: blue;
+    line-height: 3em;
+    padding: 0 1.7em;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: .5em;
+    margin: 5px 12px;
+    font-size: 13px;
+    /*box-shadow: 1px 0  darkblue inset;*/
+    
+}
+
+.boton:hover
+{
+    background: darkblue;
+}
+
+.boton:active
+{
+    transform: scale(.9);
+}
+
+/*Articulos*/
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.pr1,.pr2,.pr3,.pr4,.pr5,.pr6
+{
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 600;
+    /*font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;*/
+/*    font-family: 'Dancing Script', cursive;*/
+}
+
+/*-----------Estilos del pie-----------*/
+
+.pie
+{
+    /*background: linear-gradient(135deg,blue,green );*/
+    background: blue;
+    padding: 0 0 10px 0;
+}
+.wave
+{
+    background: red;
+}
+.pie_wave
+{
+    width: 100%;
+    margin-bottom: -5px;
+    animation: mov 1s infinite;
+}
+@keyframes mov
+{
+    
+}
+.caja_principal
+{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 90%;
+    color: white;
+    border-bottom: 1px solid cyan;
+    
+}
+
+.Trabajos, .Disenos
+{
+    margin-right: 35px;
+}
+
+.pie_items
+{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.Creditos
+{
+    margin-top: 10px;
+
+    color: white;
+    text-align: center;
+}
+
